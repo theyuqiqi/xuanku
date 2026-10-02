@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>我最喜欢的小宝宝</title>
+</head>
+<body style="text-align:center; background:#fff9fa;">
+<h1>世界上最可爱最萌萌哒的<span style="color:#f2a8b8;font-size:44px;">棠棠</span></h1>
+<p style="font-size:32px;"><span style="color:lightblue;font-size:40px;">乳酸菌</span>最爱的<span style="color:#f2a8b8;font-size:40px;">香芋派</span></p>
+<p style="font-size:32px;"><span style="color:lightblue;font-size:40px;">哈基堡</span>最爱的<span style="color:#f2a8b8;font-size:40px;">哈基挞</span></p>
+<p style="font-size:32px;"><span style="color:lightblue;font-size:40px;">小狗狗</span>最爱的<span style="color:#f2a8b8;font-size:40px;">小猫猫</span></p>
+<p style="font-size:32px;"><span style="color:lightblue;font-size:40px;">小猪猪</span>最爱的<span style="color:#f2a8b8;font-size:40px;">小兔兔</span></p>
+
+<img src="https://github.com/theyuqiqi/tangtang/blob/main/445f430b34a5a27cc00fc238dc527fc0.jpg?raw=true" style="width:400px; height:auto;object-fit:contain">
+
+<script>
+function createHeart(){
+  const heart = document.createElement('div');
+  heart.innerHTML = '❤';
+  heart.style.position = 'fixed';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.top = '-30px';
+  heart.style.color = '#f2a8b8';
+  heart.style.fontSize = Math.random()*20 +10 +'px';
+  heart.style.opacity = 0.7;
+  heart.style.pointerEvents = 'none';
+  heart.style.zIndex = '-1';
+  //下落动画
+  heart.style.transition = Math.random()*3+4 +'s linear';
+  document.body.appendChild(heart);
+  setTimeout(()=>{
+    heart.style.top = '100vh';
+  },100);
+  setTimeout(()=>{
+    heart.remove();
+  },7000);
+}
+setInterval(createHeart,300);
+</script>
+</body>
+</html>
